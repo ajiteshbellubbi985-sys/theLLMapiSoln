@@ -1,0 +1,43 @@
+# theLLMapiSoln
+https://youtu.be/u5UR_A8vX2Q?si=PEeYu6hJBgwS_V36     ( HELLO GUYS I AM RANDOM GUY some people faceing some problem using this after running command  and solution to it is
+
+
+if (!(Test-Path $PROFILE)) { New-Item -ItemType File -Path $PROFILE -Force | Out-Null }
+Add-Content -Path $PROFILE -Value @'
+
+function claude-amidia {
+  $env:ANTHROPIC_BASE_URL = "http://127.0.0.1:31415 "
+  $env:ANTHROPIC_AUTH_TOKEN = "you llm api "
+  claude @args
+}
+'@
+. $PROFILE
+
+
+
+
+THE SOLUTION TO IT IS RUN THIS COMMAND 
+STEP 1 run this command your vs code with fresh new terminal
+
+@'
+function claude-amidia {
+  $env:ANTHROPIC_BASE_URL = "http://127.0.0.1:31415"
+  $env:ANTHROPIC_AUTH_TOKEN = "freellmapi-80f76115f29db5c8022abd5de297a83508a75ef22877ef34"
+  claude @args
+}
+'@ | Set-Content -Path $PROFILE -Force
+
+step 2 :- after showing clear prompt open new terminal if your not downloaded claude code cli download it through vs code by opening new terminal
+Allow the Claude Code install script to finish setting up the binary:
+Copy and paste the exact command recommended in your terminal warning and press Enter:
+
+npm install -g --allow-scripts=@anthropic-ai/claude-code @anthropic-ai/claude-code
+
+
+Step 3 :- run this finally command on this prompt 
+
+claude-amidia
+
+
+
+if also some people facing some let me know thank you
